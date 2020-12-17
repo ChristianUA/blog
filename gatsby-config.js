@@ -6,14 +6,12 @@ const prismicHtmlSerializer = require('./src/gatsby/htmlSerializer')
 
 const website = require('./config/website')
 
-const pathPrefix = website.pathPrefix === '/' ? '' : website.pathPrefix
-
 module.exports = {
   /* General Information */
   pathPrefix: website.pathPrefix,
   siteMetadata: {
-    siteUrl: website.url + pathPrefix, // For gatsby-plugin-sitemap
-    pathPrefix,
+    siteUrl: website.url + website.pathPrefix, // For gatsby-plugin-sitemap
+    pathPrefix: website.pathPrefix,
     title: website.title,
     titleAlt: website.titleAlt,
     description: website.description,
@@ -32,14 +30,12 @@ module.exports = {
     {
       resolve: 'gatsby-source-prismic',
       options: {
-        repositoryName: 'gatsby-starter-prismic',
+        repositoryName: 'christian-blog',
         accessToken: `${process.env.API_KEY}`,
         // Get the correct URLs in blog posts
         linkResolver: () => (post) => `/${post.uid}`,
         // PrismJS highlighting for labels and slices
         htmlSerializer: () => prismicHtmlSerializer,
-        // Remove this config option if you only have one language in your Prismic repository
-        lang: 'en-gb',
       },
     },
     'gatsby-plugin-lodash',
@@ -64,7 +60,7 @@ module.exports = {
         name: website.title,
         short_name: website.titleAlt,
         description: website.description,
-        start_url: pathPrefix,
+        start_url: website.pathPrefix,
         background_color: website.backgroundColor,
         theme_color: website.themeColor,
         display: 'standalone',
