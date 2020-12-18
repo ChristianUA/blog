@@ -6,7 +6,7 @@ module.exports = {
   headline: 'A portfolio for Christian Peterson', // Headline for schema.org JSONLD
   url: 'https://prismic.lekoarts.de', // Domain of your site. No trailing slash!
   siteLanguage: 'en', // Language Tag on <html> element
-  logo: '/logos/logo-1024.png', // Used for SEO
+  logo: '/logos/logo_transparent.png', // Used for SEO
   ogLanguage: 'en_US', // Facebook Language
 
   // JSONLD / Manifest
