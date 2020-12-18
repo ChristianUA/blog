@@ -1,10 +1,10 @@
 {
-  "name": "gatsby-starter-prismic",
-  "description": "A typography-heavy & light-themed Gatsby Starter which uses the Headless CMS Prismic",
+  "name": "blog",
+  "description": "A portfolio for Christian Peterson, a web developer.",
   "private": true,
   "license": "MIT",
   "version": "1.0.0",
-  "author": "LekoArts <hello@lekoarts.de>",
+  "author": "Christian Peterson",
   "scripts": {
     "build": "gatsby build",
     "dev": "gatsby develop -o",
