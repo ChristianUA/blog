@@ -1,0 +1,8 @@
+{
+    "rewrites": [
+        {
+            "source": "/notes",
+            "destination": "https://notes.cdpeterson.dev"
+        }
+    ]
+}
