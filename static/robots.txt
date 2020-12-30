@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-sitemap: https://prismic.lekoarts.de/sitemap.xml
+sitemap: https://www.cdpeterson.dev/sitemap.xml
