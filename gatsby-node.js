@@ -75,3 +75,13 @@ exports.createPages = async ({ graphql, actions }) => {
     })
   })
 }
+
+exports.createSchemaCustomization = ({ actions }) => {
+  const { createTypes } = actions
+  const typeDefs = `
+    type PrismicPostBodyQuote {
+      primary
+    }
+  `
+  createTypes(typeDefs)
+}
